@@ -5,4 +5,7 @@ app.controller("myctrl", function($scope) {
     $scope.additem = function(){
         $scope.products.push($scope.addme);
     };
+    $scope.removeitem = function(x){
+        $scope.products.splice(x, 1);
+    };
 });

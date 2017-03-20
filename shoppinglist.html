@@ -6,7 +6,10 @@
 
 <div ng-app="myshoppinglist" ng-controller="myctrl">
   <ul>
-    <li ng-repeat="product in products">{{ product }}</li>
+    <li ng-repeat="product in products">
+      {{ product }}
+      <span ng-click="removeitem($index)">&times;</span>
+    </li>
   </ul>
   <input ng-model="addme">
   <button ng-click="additem()">Add</button>
