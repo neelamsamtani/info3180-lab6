@@ -2,7 +2,14 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
 <script type="text/javascript" src="angular.js"></script>
+
+<head>
+  <title>My Shopping List</title>
+</head>
+
 <body>
+
+<h1>My Shopping List</h1>
 
 <div ng-app="myshoppinglist" ng-controller="myctrl">
   <ul>
@@ -11,10 +18,62 @@
       <span ng-click="removeitem($index)">&times;</span>
     </li>
   </ul>
-  <input ng-model="addme">
-  <button ng-click="additem()">Add</button>
+    <input ng-model="addme">
+    <button ng-click="additem()">Add</button>
   <p>{{ errortext }}</p>
 </div>
 
 </body>
+
+<style type="text/css">
+  h1{
+    font-family: "Impact";
+    text-decoration: underline;
+    color: green;
+    text-align: center;
+  }
+  
+  body{
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 20%;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  
+  div{
+    font-family: sans-serif;
+    font-size: 20px;
+  }
+  
+  button{
+    height: 30px;
+    width: 50px;
+    font-size: 20px;
+  }
+  
+  input{
+    height: 30px;
+    width: 160px;
+    margin-left: 25px;
+    font-size: 20px;
+  }
+  
+  p{
+    font-style: italic;
+    color: red;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  li{
+    border-bottom: 1px solid black;
+    margin-left: -20px;
+  }
+  
+  span{
+    float: right;
+  }
+</style>
+
 </html>
